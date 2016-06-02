@@ -1,13 +1,9 @@
-vars = {
-	"citidev_root": "http://tohjo.eu/citidev"
-}
-
 deps = {
-	"vendor/luajit": Var("citidev_root") + "/luajit.git",
+	"vendor/luajit": "http://tohjo.eu/citidev/luajit.git",
 	"build/premake": "http://tohjo.eu/citidev/premake-core.git",
 	"vendor/jitasm": "http://tohjo.eu/citidev/jitasm.git",
 	"vendor/yaml-cpp": "https://github.com/jbeder/yaml-cpp.git",
-	"vendor/msgpack-c": "https://github.com/msgpack/msgpack-c.git",
+	"vendor/msgpack-c": "https://github.com/msgpack/msgpack-c.git@b76c8aeb8358506d3e511283b68f86522624d85e",
 	"vendor/zlib": "https://github.com/madler/zlib.git",
 	"vendor/gtest": "http://github.com/google/googletest.git",
 	"vendor/protobuf": "https://github.com/google/protobuf.git@5eb73dfcce20bdfe421620cb31b7b98a0c5eec88",
@@ -16,7 +12,7 @@ deps = {
 	"vendor/breakpad": "http://chromium.googlesource.com/breakpad/breakpad",
 	"vendor/udis86": "https://github.com/vmt/udis86.git",
 	"vendor/tinyxml2": "https://github.com/leethomason/tinyxml2.git",
-	"vendor/cpp-uri": "https://github.com/cpp-netlib/uri.git",
+	"vendor/cpp-uri": "https://github.com/cpp-netlib/uri.git@094e114255bb228341163803976a9f55b2551371",
 	"vendor/picohttpparser": "https://github.com/h2o/picohttpparser.git@98bcc1c3b431d05d4584af66082da48e4638a675",
 	"vendor/libssh": "http://tohjo.eu/citidev/libssh.git",
 	"vendor/xz": "http://git.tukaani.org/xz.git",
