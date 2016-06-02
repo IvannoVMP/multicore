@@ -30,11 +30,6 @@ hooks = [
 		"action": [ "citizenmp\prebuild_udis86.cmd" ]
 	},
 	{
-		"name": "build_premake_win",
-		"pattern": "build/premake/",
-		"action": [ "citizenmp\prebuild_premake.cmd" ]
-	},
-	{
 		"name": "generic_prebuild_win",
 		"action": [ "citizenmp\prebuild_misc.cmd" ]
 	}

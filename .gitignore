@@ -187,3 +187,4 @@ node_modules/
 
 # private configs
 privates_config.lua
+*.exe
