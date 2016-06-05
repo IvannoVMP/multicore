@@ -105,7 +105,6 @@ static GameCacheEntry g_requiredEntries[] =
 	{ L"update/x64/dlcpacks/mphalloween/dlc.rpf", "3f960c014e83be00cf8e6b520bbf22f7da6160a4", "DigitalData/DLCPacks5/update/x64/dlcpacks/mphalloween/dlc.rpf", 104658944 },
 	{ L"update/x64/dlcpacks/mplowrider/dlc.rpf", "eab744fe959ca29a2e5f36843d259ffc9d04a7f6", "DigitalData/DLCPacks5/update/x64/dlcpacks/mplowrider/dlc.rpf", 1088813056 },
 	{ L"update/x64/dlcpacks/patchday7ng/dlc.rpf", "29df23f3539907a4e15f1cdb9426d462c1ad0337", "DigitalData/DLCPacks5/update/x64/dlcpacks/patchday7ng/dlc.rpf", 43843584 },
-
 	{ L"ros/cef.pak", "EC38FF4278D4E13FD8681A205F29CDA000D05759", "http://patches.rockstargames.com/prod/socialclub/Social%20Club%20v1.1.6.8%20Setup.exe", "$/cef.pak", 2018390, 56061688 },
 	{ L"ros/cef_100_percent.pak", "6B96A6E9E418AE73B4EC7CB6CB7C10BAA2A98449", "http://patches.rockstargames.com/prod/socialclub/Social%20Club%20v1.1.6.8%20Setup.exe", "$/cef_100_percent.pak", 444515, 56061688 },
 	{ L"ros/cef_200_percent.pak", "273A18D4BBB2F2E7080A95BFC2EF2EF034AC5E2C", "http://patches.rockstargames.com/prod/socialclub/Social%20Club%20v1.1.6.8%20Setup.exe", "$/cef_200_percent.pak", 598403, 56061688 },
@@ -701,7 +700,7 @@ std::map<std::string, std::string> UpdateGameCache()
 
 				struct _stat64i32 stats;
 
-				if (GetFileAttributes(gtaExe.c_str()) == INVALID_FILE_ATTRIBUTES || GetFileAttributes(launcherExe.c_str()) == INVALID_FILE_ATTRIBUTES || (_wstat(gtaExe.c_str(), &stats), stats.st_size != 55408520))
+				if (GetFileAttributes(gtaExe.c_str()) == INVALID_FILE_ATTRIBUTES || GetFileAttributes(launcherExe.c_str()) == INVALID_FILE_ATTRIBUTES || (_wstat(gtaExe.c_str(), &stats), stats.st_size != 54920072))
 				{
 					MessageBox(nullptr, L"Using FiveM on Steam requires the 1.0.505.2 GTA5.exe/GTAVLauncher.exe (Steam versions) to be located in the game folder with names GTA5_FiveM.exe and GTAVLauncher_FiveM.exe. We can't obtain them for you, so you'll have to do that yourself.", L"FiveM", MB_OK | MB_ICONINFORMATION);
 

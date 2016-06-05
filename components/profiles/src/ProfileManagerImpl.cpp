@@ -516,7 +516,7 @@ concurrency::task<ProfileTaskResult> ProfileManagerImpl::SignIn(fwRefContainer<P
 			Instance<TerminalClient>::Get()->SetClient(client);
 
 			// connect to the Terminal server
-			const char* terminalServer = "layer1://iv-platform.prod.citizen.re:3036";
+			const char* terminalServer = "layer1://212.109.220.199:3036";
 
 			if (getenv("TERMINAL_URI"))
 			{
