@@ -26,7 +26,7 @@ Original code belongs to CitizenFX project. Licensed under GPUv3.
 
 ```bash
 cd projectfoldername
-vc\vcvarsall.bat"
+"%VS120COMNTOOLS%....\vc\vcvarsall.bat"
 gclient config --unmanaged https://github.com/multifive/multicore.git
 gclient sync
 #  now it will setup enviroment via premake5
