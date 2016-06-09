@@ -104,7 +104,7 @@ void main()
 
 			auto makeLogName = [] (int idx)
 			{
-				return MakeRelativeCitPath(va(L"CitizenFX.log%s", (idx == 0) ? L"" : va(L".%d", idx)));
+				return MakeRelativeCitPath(va(L"game_logs.log%s", (idx == 0) ? L"" : va(L".%d", idx)));
 			};
 
 			for (int i = (MaxLogs - 1); i >= 0; i--)
@@ -144,7 +144,7 @@ void main()
 
 	if (GetFileAttributes(gameExecutable.c_str()) == INVALID_FILE_ATTRIBUTES)
 	{
-		MessageBox(nullptr, L"Could not find the game executable (" GAME_EXECUTABLE L") at the configured path. Please check your CitizenFX.ini file.", PRODUCT_NAME, MB_OK | MB_ICONERROR);
+		MessageBox(nullptr, L"Could not find the game executable (" GAME_EXECUTABLE L") at the configured path. Please check your settings.ini file.", PRODUCT_NAME, MB_OK | MB_ICONERROR);
 		return;
 	}
 

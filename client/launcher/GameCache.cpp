@@ -393,10 +393,10 @@ static bool ShowDownloadNotification(const std::vector<std::pair<GameCacheEntry,
 	taskDialogConfig.hInstance = GetModuleHandle(nullptr);
 	taskDialogConfig.dwFlags = TDF_EXPAND_FOOTER_AREA;
 	taskDialogConfig.dwCommonButtons = TDCBF_YES_BUTTON | TDCBF_NO_BUTTON;
-	taskDialogConfig.pszWindowTitle = L"FiveM: Game cache outdated";
+	taskDialogConfig.pszWindowTitle = L"Multifive: Game cache outdated";
 	taskDialogConfig.pszMainIcon = TD_INFORMATION_ICON;
-	taskDialogConfig.pszMainInstruction = L"FiveM needs to update the game cache";
-	taskDialogConfig.pszContent = va(L"The local FiveM game cache is outdated, and needs to be updated. This will copy %.2f MB of data from the local disk, and download %.2f MB of data from the internet.\nDo you wish to continue?", (localSize / 1024.0 / 1024.0), (remoteSize / 1024.0 / 1024.0));
+	taskDialogConfig.pszMainInstruction = L"Multifive needs to update the game cache";
+	taskDialogConfig.pszContent = va(L"The local Multifive game cache is outdated, and needs to be updated. This will copy %.2f MB of data from the local disk, and download %.2f MB of data from the internet.\nDo you wish to continue?", (localSize / 1024.0 / 1024.0), (remoteSize / 1024.0 / 1024.0));
 	taskDialogConfig.pszExpandedInformation = footerString.c_str();
 	taskDialogConfig.pfCallback = [] (HWND, UINT type, WPARAM wParam, LPARAM lParam, LONG_PTR data)
 	{
@@ -695,14 +695,14 @@ std::map<std::string, std::string> UpdateGameCache()
 		{
 			if (GetFileAttributes(MakeRelativeGamePath(L"steam_api64.dll").c_str()) != INVALID_FILE_ATTRIBUTES)
 			{
-				std::wstring gtaExe = MakeRelativeGamePath(L"GTA5_FiveM.exe");
-				std::wstring launcherExe = MakeRelativeGamePath(L"GTAVLauncher_FiveM.exe");
+				std::wstring gtaExe = MakeRelativeGamePath(L"GTA5_MV.exe");
+				std::wstring launcherExe = MakeRelativeGamePath(L"GTAVLauncher_MV.exe");
 
 				struct _stat64i32 stats;
 
 				if (GetFileAttributes(gtaExe.c_str()) == INVALID_FILE_ATTRIBUTES || GetFileAttributes(launcherExe.c_str()) == INVALID_FILE_ATTRIBUTES || (_wstat(gtaExe.c_str(), &stats), stats.st_size != 54920072))
 				{
-					MessageBox(nullptr, L"Using FiveM on Steam requires the 1.0.505.2 GTA5.exe/GTAVLauncher.exe (Steam versions) to be located in the game folder with names GTA5_FiveM.exe and GTAVLauncher_FiveM.exe. We can't obtain them for you, so you'll have to do that yourself.", L"FiveM", MB_OK | MB_ICONINFORMATION);
+					MessageBox(nullptr, L"Using Multifive on Steam requires the 1.0.505.2 GTA5.exe/GTAVLauncher.exe (Steam versions) to be located in the game folder with names GTA5_MV.exe and GTAVLauncher_MV.exe. We can't obtain them for you, so you'll have to do that yourself.", L"FiveM", MB_OK | MB_ICONINFORMATION);
 
 					ExitProcess(0);
 				}

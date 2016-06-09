@@ -667,6 +667,7 @@ void NetLibrary::ConnectToServer(const char* hostname, uint16_t port)
 
 			//nui::ExecuteRootScript("citFrames[\"mpMenu\"].contentWindow.postMessage({ type: 'connectFailed', message: 'General handshake failure.' }, '*');");
 			OnConnectionError("General handshake failure.");
+			trace("no result\n");
 
 			return;
 		}
@@ -727,6 +728,8 @@ void NetLibrary::ConnectToServer(const char* hostname, uint16_t port)
 	};
 
 	m_httpClient->DoPostRequest(wideHostname, port, L"/client", postMap, handleAuthResult);
+	trace("now do request\n");
+
 }
 
 void NetLibrary::Disconnect(const char* reason)
